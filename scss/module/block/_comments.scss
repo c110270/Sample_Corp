@@ -1,0 +1,107 @@
+.bl_comment_container{
+  position: relative;
+
+  @include _mq(tab){
+    margin-top: 60px;
+  }
+
+  @include _mq(sp){
+    margin-top: 0;
+  }
+}
+
+.bl_bgcComment{
+  background-color: $color-bg-sub;
+  width: 76.56%;
+  height: 576px;
+
+  @include _mq(tab){
+    width: 100%;
+  }
+
+  @include _mq(sp){
+    height: 425px;
+  }
+}
+
+.bl_commentUnit{
+  position: absolute;
+  top: -135px;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(tab){
+    top: -60px;
+  }
+
+  @include _mq(sp){
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+
+.bl_comment_left{
+  background-color: $color-bg-white;
+  box-shadow: 0 0 10px $color-shadow-sub;
+  width: 55.5%;
+  padding: 120px 60px;
+
+  @include _mq(tab){
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+
+  @include _mq(sp){
+    padding: 40px 20px;
+  }
+}
+
+.bl_comment{
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+
+  @include _mq(sp){
+    margin-top: 40px;
+    align-items: stretch;
+  }
+
+  &:first-of-type{
+    margin-top: 0;
+  }
+
+  &_img{
+    width: 100px;
+    height: 100px;
+
+    @include _mq(sp){
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &_text{
+    width: calc(100% - 100px - 32px);
+    margin-left: 32px;
+    line-height: 1.5;
+
+    @include _mq(sp){
+      font-size: 14px;
+      margin-left: 20px;
+      width: calc(100% - 60px - 20px);
+      line-height: 1.4;
+    }
+  }
+}
+
+.bl_comment_right{
+  width: 44.5%;
+
+  @include _mq(tab){
+    display: none;
+  }
+}

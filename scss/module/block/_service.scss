@@ -1,0 +1,79 @@
+
+.bl_serviceBg{
+  position: relative;
+  background-color: $color-bg-sub;
+  height: 400px;
+
+  @include _mq(sp){
+    height: 480px;
+  }
+}
+
+.bl_serviceUnit{
+  position: absolute;
+  top: 164px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(sp){
+    top: 110px;
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+
+.bl_services{
+  display: flex;
+  background-color: $color-bg-white;
+  box-shadow: 0 5px 12px $color-shadow-main;
+  width: 100%;
+  max-width: 960px;
+  padding: 60px 45px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include _mq(sp){
+    display: block;
+    padding: 40px 16px;
+  }
+}
+
+.bl_service{
+  width: 230px;
+  margin-right: 90px;
+
+  @include _mq(sp){
+    width: 100%;
+    margin-top: 56px;
+    margin-right: 0;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  &_img{
+   text-align: center;
+  }
+
+  &_ttl{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 18px;
+  }
+
+  &_text{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,83 @@
+
+.bl_newsUnit{
+  position: relative;
+  background-color: $color-bg-white;
+  box-shadow: 0 0 10px $color-shadow-sub;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+
+  @include _mq(sp){
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: -100px;
+  }
+}
+
+.bl_news{
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $color-font-main;
+  border-top: 1px solid $color-border-sub;
+  border-bottom: 1px solid $color-border-sub;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  transition: all 0.3s ease 0s;
+
+  @include _mq(sp){
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: url(../img/news/news-arrow-1.png) no-repeat center center;
+    width: 43px;
+    height: 46px;
+  }
+
+  @include _mq(sp){
+    display: block;
+    text-align: left;
+  }
+
+  &:hover{
+    background-color: $color-bg-news;
+  }
+
+  &_left{
+    display: flex;
+    align-items: center;
+    width: 259px;
+  }
+
+  &_date{
+    margin-right: 40px;
+    width: 98px;
+    
+    @include _mq(sp){
+      display: inline-block;
+      font-size: 14px;
+      width: 76px;
+      margin-right: 24px;
+    }
+  }
+
+  &_text{
+    width: calc(100% - 98px - 40px - 121px );
+    margin-left: 40px;
+    margin-right: 83px;
+
+    @include _mq(sp){
+      font-size: 14px;
+      width: calc(100% - 55px);
+      margin: 0;
+      margin-top: 12px;
+    }
+  }
+}

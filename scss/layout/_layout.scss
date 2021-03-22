@@ -1,0 +1,133 @@
+/*==================================
+ヘッダー
+===================================*/
+.ly_header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color-bg-header;
+  width: 100%;
+  max-width: $ly-width-canvas;
+  height: 83px;
+  -webkit-transition: ease .5s;
+ transition: ease .5s;  
+  z-index: map-get($layer , header );
+
+  @include _mq(sp){
+    height: 68px;
+  }
+
+  /* ドロワーが開いた際に一緒にスライド */
+  &.open{
+    margin-left: -300px;
+  }
+}
+
+.ly_header_inner{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(sp){
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+
+/*==================================
+メインビジュアル
+===================================*/
+.ly_mainVisual{
+  position: relative;
+  background: url(../img/mv.png) no-repeat 25% center;
+  width: 100%;
+  max-width: $ly-width-canvas;
+  height: 565px;
+  background-size: cover;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;  
+
+  /* ドロワーが開いた際に一緒にスライド */
+  &.open{
+    margin-left: -300px;
+  }
+}
+
+.ly_mainVisual_inner{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(sp){
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+
+/*==================================
+Q&A
+===================================*/
+.ly_qa{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  background: url(../../img/qa-bg.png) no-repeat;
+  padding-bottom: 120px;
+
+  @include _mq(sp){
+    padding-bottom: 60px;
+  }
+}
+
+/*==================================
+footer
+===================================*/
+.ly_footer{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  background-color: $color-bg-sub;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.ly_footer_inner{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $color-font-white;
+
+  @include _mq(tab){
+    display: block;
+  }
+}
+
+/*==================================
+共通
+===================================*/
+.ly_main{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  background-color: $color-bg-main;
+  padding-top: 120px;
+
+  @include _mq(sp){
+    padding-top: 60px;
+  }
+}
+
+.ly_cont{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(sp){
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+

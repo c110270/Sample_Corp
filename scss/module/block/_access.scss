@@ -1,0 +1,77 @@
+.bl_bgAccess{
+  background-color: $color-bg-sub;
+  width: 100%;
+  max-width: 980px;
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-bottom: 120px;
+
+  @include _mq(tab){
+    max-width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 36.8%;
+  }
+}
+
+.bl_access{
+  
+  &_body{
+    color: $color-font-white;
+    width: 100%;
+    max-width: 314px;
+
+    @include _mq(tab){
+      max-width: 100%;
+    }
+  }
+
+  &_text{
+    line-height: 1.5;
+  }
+
+  &_mapUnit{
+    position: relative;
+
+    @include _mq(tab){
+      width: 100%;
+    }
+
+    .bl_access_gbtn{
+      @include _mq(tab){
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 84.25%;
+      }
+    }
+
+  }
+
+  &_map{
+    position: relative;
+    height: 0;
+    width: 0;
+    
+    @include _mq(tab){
+      width: 100%;
+      margin-left: 0;
+      padding-top: 71.62%;
+      margin-top: 24px;
+    }
+
+    iframe{
+      position: absolute;
+      top: -264px;
+      left: 414px;
+
+      @include _mq(tab){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

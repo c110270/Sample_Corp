@@ -1,0 +1,103 @@
+.bl_resultsUnit{
+  padding-left: 60px;
+
+  @include _mq(sp){
+    padding-left: 0;
+  }
+
+.swiper-container{
+  cursor: pointer;
+  padding-bottom: 60px;
+}
+}
+
+.bl_result{
+  width: 100%;
+  max-width: 400px;
+
+  @include _mq(sp){
+    width: 100%;
+    max-width: 274px;
+    padding-left: $padding-sp;
+  }
+
+  &_body{
+    background-color: $color-bg-white;
+    padding: 16px;
+
+    @include _mq(sp){
+      padding: 12px;
+    }
+  }
+
+  &_ttl{
+    font-size: 20px;
+    font-weight: bold;
+
+    @include _mq(sp){
+      font-size: 14px;
+    }
+  }
+
+  &_text{
+    margin-top: 16px;
+
+    @include _mq(sp){
+      font-size: 12px;
+    }
+  }
+}
+
+.bl_result_pagination{
+  text-align: left;
+  bottom: 0;
+
+  @include _mq(sp){
+    text-align: center;
+  }
+}
+
+.swiper-pagination-bullet{
+  position: relative;
+  background-color: transparent;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $color-bg-white;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.swiper-pagination-bullet-active{
+  position: relative;
+  background-color: transparent;
+  border: 1px solid $color-border-white;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $color-bg-white;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets{
+  bottom: 0;
+}

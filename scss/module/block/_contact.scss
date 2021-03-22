@@ -1,0 +1,324 @@
+.bl_bgContact{
+  width: 100%;
+  background: url(../img/contact/contact-bg.png) no-repeat center center;
+  padding: 60px 160px;
+
+  @include _mq(tab){
+    padding: 40px;
+  }
+
+  @include _mq(sp){
+    padding: 40px 16px;
+  }
+}
+
+.bl_contact_header{
+    background: url(../img/contact/contact1.png) no-repeat center center;
+    color: $color-font-white;
+    border-radius: 12px;
+    text-align: center;
+    padding-bottom: 60px;
+
+    @include _mq(tab){
+      padding-bottom: 40px;
+    }
+
+    @include _mq(sp){
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .bl_contact_subTitle{
+      margin-top: 16px;
+
+      @include _mq(sp){
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+}
+
+.bl_contact{
+  background-color: $color-bg-white;
+  border-radius: 0 0 12px 12px;
+  padding: 60px 120px;
+
+  @include _mq(tab){
+    padding: 40px 80px;
+  }
+
+  @include _mq(sp){
+    padding: 40px 16px;
+  }
+}
+
+.selectBox{
+  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  width: 178px;
+  padding: 12px;
+  margin-left: 60px;
+
+  @include _mq(tab){
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  option{
+    &:first-child{
+      display: none;
+    }
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:hover{
+    box-shadow: 0 0 5px $color-shadow-form;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.bl_contact_selectBox{
+  position: relative;
+  display: inline-block;
+
+  @include _mq(tab){
+    display: block;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-bottom: solid 2px $color-font-main;
+    border-right: solid 2px $color-font-main;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -8px;
+
+    @include _mq(tab){
+      margin-top: 8px;
+    }
+  }
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  display: block;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-bottom: 1px solid $color-border-main;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  width: 532px;
+  margin-left: auto;
+
+  @include _mq(tab){
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  &:hover{
+    border-bottom: 1px solid $color-border-form;
+    box-shadow: none;
+    box-shadow: 0 2px 0 $color-shadow-form;
+  }
+
+  &:focus{
+    border-bottom: 1px solid $color-border-form;
+    box-shadow: none;
+    box-shadow: 0 2px 0 $color-shadow-form;
+    outline: none;
+	}
+}
+
+.bl_contact_text,
+.bl_contact_email{
+  display: flex;
+  margin-top: 32px;
+
+  @include _mq(tab){
+    display: block;
+  }
+}
+
+.bl_contact_radio{
+  margin-top: 32px;
+
+  .bl_contact_radioTitle{
+    margin-right: 176px;
+
+    @include _mq(tab){
+      display: block;
+    }
+  }
+}
+
+input[type="radio"]{
+  display: none;
+  }
+
+  .radio + span{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 40px;
+
+   @include _mq(tab){
+     margin-top: 16px;
+     margin-left: 20px;
+   }
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -8px;
+      transform: translate(-100%,-50%);
+      display: block;
+      border: 1px solid $color-border-main;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover::before{
+        border: 1px solid $color-border-form;
+    }
+
+    &:active::before{
+      background-color: $color-shadow-form;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+  /* (外側width-内側width)÷ 2 + 外側left */
+      left: -11px;
+      transform: translate(-100%,-50%);
+      background: #3B69FF;
+      border: 1px solid transparent;
+      border-radius: 50%;
+  /* 外側の円の半分にする */
+      width: 6px;
+      height: 6px;
+      opacity: 0;
+     }
+    }
+
+    .radio:checked + span::after {
+      opacity: 1;
+    }
+
+    .bl_contact_message{
+      margin-top: 32px;
+    }
+
+    textarea{
+      width: 100%;
+      border: 1px solid $color-border-main;
+      height: 200px;
+      margin-top: 8px;
+
+      @include _mq(tab){
+        height: 180px;
+      }
+
+      &:hover{
+        border: 1px solid $color-border-form;
+        box-shadow: 0 0 8px $color-shadow-form;
+      }
+
+      &:focus{
+        border: 1px solid $color-border-form;
+        box-shadow: 0 0 8px $color-shadow-form;
+        outline: none;
+      }
+    }
+
+  .bl_contact_check{
+    margin-top: 32px;
+  }
+
+  input[type="checkbox"]{
+    display: none;
+  }
+
+  .bl_contact_personal + span{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 40px;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-border-main;
+    }
+
+    &:hover::before{
+      border: 1px solid $color-border-form;
+      box-shadow: 0 0 5px $color-shadow-form;
+    }
+
+    &:active::before{
+      border: 1px solid $color-border-form;
+      background-color: $color-shadow-form;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 6px;
+      border-bottom: 2px solid $color-border-form;
+      border-left: 2px solid $color-border-form;
+      transform: rotate(-50deg);
+      margin-top: -6px;
+      opacity: 0;
+    }
+  }
+
+  .bl_contact_personal:checked + span::after {
+    opacity: 1;
+  }
+
+
+
+

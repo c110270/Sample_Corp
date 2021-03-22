@@ -1,0 +1,10 @@
+@import './variables';
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin _mq($breakpoint) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}

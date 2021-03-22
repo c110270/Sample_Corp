@@ -1,0 +1,89 @@
+/*==================================
+カラー
+===================================*/
+
+// フォントカラー
+$color-font-main: #3E3E3E;
+$color-font-white: #FFFFFF;
+
+// バックグラウンド
+$color-bg-main: #F3F3F3;
+$color-bg-sub: #3E3E3E;
+$color-bg-header: rgba(0, 0, 0, 0.1);
+$color-bg-thinBlue: rgba(59, 105, 255, 0.2);
+$color-bg-mandatory: #FF4646;
+$color-bg-white: #FFFFFF;
+$color-bg-news: rgba(73, 115, 255, 0.1);
+
+// ボタン
+$color-btn-conversion: #FFAA3B;
+
+// ホバー
+$color-hover-conversion: #F18900;
+$color-hover-btn: #3E3E3E;
+$color-hover-white: #FFFFFF;
+
+// アクティブ
+$color-active-conversion: #B2B2B2;
+
+// シャドウ
+$color-shadow-main: rgba(62, 62, 62, 0.2);
+$color-shadow-sub: rgba(0, 0, 0, 0.16);
+$color-shadow-conversion: rgba(0, 0, 0, 0.2);
+$color-shadow-form: rgba(73, 115, 255, 0.5);
+
+// ボーダー
+$color-border-main: #707070;
+$color-border-sub: #CECDCD;
+$color-border-label: #3B69FF;
+$color-border-form: #3B69FF;
+$color-border-white: #FFFFFF;
+
+// アイコン
+$color-icon-main: #3B69FF;
+
+// ロゴ
+$color-logo-main: #E3E3E3;
+
+/*==================================
+フォント
+===================================*/
+// サイズ
+$fz-subHeading: 20px;
+$fz-main: 16px;
+$fz-small: 14px;
+
+// ファミリー
+$font-family-main: 'Montserrat', '游ゴシック体' , sans-serif;
+
+/*==================================
+レイアウト幅
+===================================*/
+$ly-width-canvas: 1280px;
+
+/*==================================
+余白
+===================================*/
+$padding-pc: 40px;
+$padding-sp: 16px;
+
+/*==================================
+ブレイクポイント
+===================================*/
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$ly-width-canvas - $padding-pc * 2 - 1px})",
+  "pc": "screen and (min-width: #{$ly-width-canvas - $padding-pc * 2})",
+);
+
+/*==================================
+階層(z-index)
+===================================*/
+$layer: (
+  default:1,
+  heading: 5,
+  footer: 10,
+  header: 20,
+  drawer: 40,
+  pageTop: 50
+);

@@ -1,0 +1,95 @@
+/*==================================
+アコーディオン
+===================================*/
+.js_qa_icon{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: url(../../img/plus.png) no-repeat center center;
+  width: 17px;
+  height: 17px;
+}
+
+.js_qa_open{
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  background: url(../../img/minus.png) no-repeat center center;
+  width: 17px;
+  height: 17px;
+}
+
+/*==================================
+ページトップ
+===================================*/
+.page_top {
+  // 固定位置設定する
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+  // 初めからTopボタン表示させる場合は必要なし
+    display: none;
+    z-index: map-get($layer, 'pageTop' );
+
+    @include _mq(sp){
+      bottom: 16px;
+      right: 16px;
+    }
+  
+  a {
+    // topボタンの中身
+    display: inline-block;
+    background: url(../../img/totop.png) no-repeat center center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+
+    @include _mq(sp){
+      width: 50px;
+      height: 50px;
+    }
+    }
+}
+
+/*==================================
+ドロワーメニュー
+===================================*/
+.js_drawer_icon{
+
+  @include _mq(sp){
+    position: relative;
+    -webkit-transition: ease .5s;
+    transition: ease .5s;  
+    
+    &::after{
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: 0px;
+      background: url(../../img/hamburger.png)no-repeat center center;
+      width: 26px;
+      height: 20px;
+      z-index: map-get($layer, drawer );
+    }
+  }
+}
+
+.js_drawer_toggle.open .js_drawer_icon{
+  &::after{
+    background: url(../../img/batsu.png)no-repeat center center;
+  }
+}
+
+.js_drawer_layer.open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $color-bg-sub;
+  opacity: 0.7;
+  z-index: 19;
+}

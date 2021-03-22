@@ -1,0 +1,56 @@
+
+.bl_priceTable{
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include _mq(sp){
+    max-width: 100%;
+  }
+}
+
+.bl_price{
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  th{
+    color: $color-font-white;
+    background-color: $color-bg-sub;
+    border-bottom: 1px solid $color-border-white;
+    padding: 16px 100px;
+
+    @include _mq(sp){
+      padding: 16px;
+    }
+
+    &:first-child{
+      width: 262px;
+
+      @include _mq(sp){
+        width: 30%;
+      }
+    }
+  }
+
+  td{
+    background-color: $color-bg-white;
+    border: 1px solid $color-border-main;
+    font-weight: bold;
+    padding-left: 40px;
+
+    @include _mq(sp){
+      padding-left: 16px;
+    }
+  }
+
+  &_text{
+    font-size: 12px;
+    margin-top: 12px;
+
+    @include _mq(sp){
+      margin-top: 8px;
+    }
+  }
+}

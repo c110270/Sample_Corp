@@ -1,0 +1,116 @@
+.bl_headerUnit{
+  display: flex;
+}
+
+.bl_logo{
+  display: none;
+  
+
+  @include _mq(sp){
+    display: block;
+    color: $color-font-main;
+    line-height: 68px;
+    white-space: nowrap;
+    width: 160px;
+  }
+
+  a{
+    color: $color-font-main;
+    font-size: 23px;
+    font-weight: bold;
+  }
+}
+
+.bl_gnav{
+    margin-right: auto;
+    margin-left: auto;
+
+    @include _mq(sp){
+      margin-right: 0;
+    }
+
+  &_list{
+    display: flex;
+    
+    @include _mq(sp){
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      background-color: $color-bg-white;
+      width: 300px;
+      height: 100vh;
+      text-align: center;
+      -webkit-transition: ease .5s;
+      transition: ease .5s;
+      z-index: map-get($layer, drawer );
+    }
+  }
+
+  &_list.open { 
+    /* 裏側に隠していたリストを登場させる */
+      margin-left: -300px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;  
+      width: 300px;
+    /*　スクロールしながら登場させる */
+      transform: translateZ(0);
+  }
+
+  &_item{
+    padding-left:20px;
+
+    @include _mq(sp){
+      padding-left: 0;
+    }
+
+    a{
+      display: inline-block;
+      text-decoration: none;
+    }
+}
+
+  &_item{
+    margin-right: 40px;
+    line-height: 83px;
+
+    @include _mq(sp){
+      font-size: 18px;
+      padding-top: 32px;
+      margin-right: 0;
+      line-height: 1;
+
+      &:first-child{
+        padding-top: 161px;
+      }
+    }
+  
+    &:last-child{
+      margin-right: 0;
+    }
+
+    a{
+      position: relative;
+      color: $color-font-main;
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 24px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color-border-main;
+        transition: all 0.3s ease 0s;
+
+        @include _mq(sp){
+          bottom: -6px;
+        }
+      }
+
+      &:hover::after{
+        width: 100%;
+      }
+    }
+  }
+}

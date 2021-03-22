@@ -1,0 +1,123 @@
+/*==================================
+margin
+===================================*/
+.hp_mt40{
+  margin-top: 40px;
+}
+
+.hp_mt32{
+  margin-top: 32px;
+}
+
+.hp_mt24Sp{
+  @include _mq(sp){
+    margin-top: 24px;
+  }
+}
+
+.hp_mt32Tab{
+  @include _mq(tab){
+    margin-top: 32px;
+  }
+}
+
+/*==================================
+padding
+===================================*/
+
+.hp_pt116{
+  padding-top: 116px;
+}
+
+.hp_pt120{
+  padding-top: 120px;
+}
+
+.hp_pt130{
+  padding-top: 130px;
+}
+
+.hp_pt215{
+  padding-top: 215px;
+}
+
+.hp_pt256{
+  padding-top: 256px;
+}
+
+.hp_pt292{
+  padding-top: 292px;
+}
+
+.hp_pt0{
+  padding-top: 0;
+}
+
+.hp_pl60{
+  padding-left: 60px;
+}
+
+.hp_pb0{
+  padding-bottom: 0;
+}
+
+.hp_pb60{
+  padding-bottom: 60px;
+}
+
+.hp_pr0{
+  padding-right: 0;
+}
+
+.hp_pr40{
+  padding-right: 40px;
+}
+
+.hp_pt0Tab{
+  @include _mq(tab){
+    padding-top: 0;
+  }
+}
+
+.hp_pt120Tab{
+  @include _mq(tab){
+    padding-top: 120px;
+  }
+}
+
+.hp_pt433Sp{
+  @include _mq(sp){
+    padding-top: 433px;
+  }
+}
+
+.hp_pr0Tab{
+  @include _mq(tab){
+    padding-right: 0;
+  }
+}
+
+.hp_pl0Sp{
+  @include _mq(sp){
+    padding-left: 0;
+  }
+}
+/*==================================
+text-align
+===================================*/
+.hp_tac{
+  text-align: center;
+}
+
+.hp_tacSp{
+  @include _mq(sp){
+    text-align: center;
+  }
+}
+
+/*==================================
+background
+===================================*/
+.hp_bgcSub{
+  background-color: $color-bg-sub;
+}

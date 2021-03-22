@@ -1,0 +1,39 @@
+
+.bl_mainVisual{
+
+  &_body{
+    width: 50%;
+    margin-left: auto;
+    padding-top: 153px;
+
+    @include _mq(sp){
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &_ttl{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    @include _mq(tab){
+      font-size: 24px;
+    }
+  }
+
+  &_text{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 40px;
+
+    @include _mq(tab){
+      font-size: 16px;
+      margin-top: 32px;
+    }
+
+    @include _mq(sp){
+      font-size: 14px;
+    }
+  }
+}

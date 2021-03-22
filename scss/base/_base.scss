@@ -1,0 +1,20 @@
+@import './variables';
+
+body{
+  font-size: $fz-main;
+  font-family: $font-family-main;
+  padding-top: 83px;
+
+  @include _mq(sp){
+    padding-top: 68px;
+  }
+}
+
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a{
+  color: $color-font-white;
+}

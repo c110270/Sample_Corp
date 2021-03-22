@@ -1,0 +1,113 @@
+/*==================================
+ボタン
+===================================*/
+.el_btn{
+  display: inline-block;
+  color: $color-font-main;
+  border: 1px solid $color-border-main;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 80px;
+  white-space: nowrap;
+  transition: all 0.3s ease 0s;
+
+  @include _mq(tab){
+    padding: 16px 80px;
+  }
+
+  &:hover{
+    background-color: $color-hover-btn;
+    color: $color-font-white;
+  }
+}
+
+.el_btn__black{
+  color: $color-font-white;
+  border: 1px solid $color-border-white;
+
+  &:hover{
+    color: $color-font-main;
+    background-color: $color-hover-white;
+    border: 1px solid $color-border-main;
+  }
+}
+
+.el_btnConversion{
+  display: inline-block;
+  background-color: $color-btn-conversion;
+  padding: 16px 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px $color-shadow-conversion;
+  transition: all 0.3s ease 0s;
+
+  &:hover{
+    background-color: $color-hover-conversion;
+  }
+
+  &:active{
+    background-color: $color-active-conversion;
+  }
+}
+
+/*==================================
+ラベル
+===================================*/
+.el_label{
+
+  span{
+    width: 121px;
+    display: inline-block;
+    color: $color-font-main;
+    font-size: 14px;
+    border: 2px solid $color-border-label;
+    border-radius: 50px;
+    padding: 8px 30px;
+    text-align: center;
+
+    @include _mq(sp){
+      width: 100%;
+      font-size: 12px;
+      padding: 4px 16px;
+    }
+  }
+}
+
+.el_mandatory{
+  display: inline-block;
+  position: relative;
+
+  &::after{
+    content: "必須";
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translate(100%,-50%);
+    color: $color-font-white;
+    background-color: $color-bg-mandatory;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 2px 8px;
+    margin-top: -1px;
+  }
+}
+
+/*==================================
+見出し
+===================================*/
+.el_lv2Heading{
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  line-height: 1.2;
+
+  @include _mq(sp){
+    font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.el_lv2Heading__white{
+  color: $color-font-white;
+}

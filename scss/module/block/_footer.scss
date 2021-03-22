@@ -1,0 +1,59 @@
+
+.bl_footer_icons{
+  text-align: center;
+}
+
+.bl_footer_facebook{
+  font-size: 36px;
+  opacity: 0.6;
+}
+
+.bl_footer_twitter{
+  display: none;
+  opacity: 0;
+
+  @include _mq(tab){
+    opacity: 1;
+    font-size: 36px;
+    opacity: 0.6;
+    margin-right: 50px;
+  }
+}
+
+.bl_footer_text{
+  margin-top: 24px;
+
+  @include _mq(tab){
+    text-align: center;
+  }
+
+  &:first-of-type{
+    margin-top: 40px;
+  }
+}
+
+.bl_footer_logo{
+  font-size: 40px;
+  font-weight: bold;
+
+  @include _mq(tab){
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  @include _mq(sp){
+    font-size: 32px;
+  }
+}
+
+.bl_footer_copyRight{
+  font-size: 12px;
+  text-align: right;
+  margin-top: 10px;
+  opacity: 0.6;
+
+  @include _mq(tab){
+    margin-top: 12px;
+    text-align: center;
+  }
+}
